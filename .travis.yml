@@ -12,7 +12,8 @@ install:
 script:
     #- coverage run `which trial` jasmin.managers.test.test_managers.AuthenticatedTestCases.test_connect_failure
     - echo $ROOT_PATH
-    - ls -l $ROOT_PATH
+    - ls -l $ROOT_PATH/etc/jasmin
+    - ls -l $ROOT_PATH/etc/jasmin/resource
     - cat $ROOT_PATH/var/log/jasmin/*
 services:
     - rabbitmq
