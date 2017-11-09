@@ -11,6 +11,7 @@ install:
 # Commands to run tests:
 script:
     #- coverage run `which trial` jasmin.managers.test.test_managers.AuthenticatedTestCases.test_connect_failure
+    - pip uninstall jasmin
     - echo $ROOT_PATH
     - ls -l $ROOT_PATH/etc/jasmin
     - ls -l $ROOT_PATH/etc/jasmin/resource
