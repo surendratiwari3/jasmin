@@ -10,7 +10,7 @@ install:
     - pip install "dist/jasmin-$JASMIN_RELEASE.tar.gz"
 # Commands to run tests:
 script:
-    - `which trial` jasmin.managers.test.test_managers.AuthenticatedTestCases.test_connect_failure
+    - coverage run `which trial` jasmin.managers.test.test_managers.AuthenticatedTestCases.test_connect_failure
     - cat $ROOT_PATH/var/log/jasmin/*
 services:
     - rabbitmq
