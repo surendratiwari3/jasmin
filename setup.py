@@ -28,6 +28,7 @@ if "install" in sys.argv:
                '%s/etc/jasmin/store' % ROOT_PATH,
                '%s/var/log/jasmin' % ROOT_PATH, ]
     for sysdir in sysdirs:
+        print 'Checking 1 %s' % sysdir
         if not os.path.exists(sysdir):
             print 'WARNING: %s does not exist !' % sysdir
 
@@ -38,6 +39,7 @@ if "install" in sys.argv:
 
     # 4. Check if sysdirs are owned by jasmin user
     for sysdir in sysdirs[3:]:
+        print 'Checking 2 %s' % sysdir
         if os.path.exists(sysdir) and pwd.getpwuid(os.stat(sysdir).st_uid).pw_name != 'jasmin':
             print 'WARNING: %s is not owned by jasmin user !' % sysdir
 
