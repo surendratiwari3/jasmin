@@ -9,6 +9,6 @@ lockfile>=0.10.0
 vine>1.2.0
 
 # Added in 0.9rc16:
-celery>=4.0.0
+celery>=4.3.0
 redis>=2.10
 requests>=2.13.0
